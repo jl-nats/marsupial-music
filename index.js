@@ -3,7 +3,6 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, Events, GatewayIntentBits } = require('discord.js');
 const { SpotifyExtractor } = require('@discord-player/extractor');
-const { token } = require('./config.json');
 const { Player } = require('discord-player');
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds, 'GuildVoiceStates'] });
@@ -15,7 +14,7 @@ async function loadExtractors() {
 }
 loadExtractors();
 
-
+const token = process.env.TOKEN;
 // // this event is emitted whenever discord-player starts to play a track
 // player.events.on('playerStart', (queue, track) => {
 // 	// we will later define queue.metadata object while creating the queue
