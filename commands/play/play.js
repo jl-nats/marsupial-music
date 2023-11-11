@@ -48,11 +48,11 @@ module.exports = {
 		// }
 
 		try {
-			const uSeed = Math.random();
-			if (uSeed < 0.1) {
-				vidUrl = "https://www.youtube.com/watch?v=xqS2di2QdhQ";
-				await interaction.followUp("Something went wrong: AAAAAAAAAAHHHHHHHHHHHHHHHH 🗣️🗣️🗣️🗣️🗣️🗣️🔥🔥🔥🔥🔥❗❗❗❗❗❗");
-			}
+			// const uSeed = Math.random();
+			// if (uSeed < 0.1) {
+			// 	vidUrl = "https://www.youtube.com/watch?v=xqS2di2QdhQ";
+			// 	await interaction.followUp("Something went wrong: AAAAAAAAAAHHHHHHHHHHHHHHHH 🗣️🗣️🗣️🗣️🗣️🗣️🔥🔥🔥🔥🔥❗❗❗❗❗❗");
+			// }
 
 			const { track } = await player.play(userChannel, vidUrl, {
 				nodeOptions: {
